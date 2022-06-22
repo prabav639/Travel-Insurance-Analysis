@@ -117,16 +117,11 @@ plt.show()
 from sklearn import preprocessing
 lbla = preprocessing.LabelEncoder()
 insurance['Agency']= lbla.fit_transform(insurance['Agency'])
-lblb = preprocessing.LabelEncoder()
-insurance['Agency Type']= lblb.fit_transform(insurance['Agency Type'])
-lblc = preprocessing.LabelEncoder()
-insurance['Distribution Channel']= lblc.fit_transform(insurance['Distribution Channel'])
-lbld = preprocessing.LabelEncoder()
-insurance['Product Name']= lbld.fit_transform(insurance['Product Name'])
-lble = preprocessing.LabelEncoder()
-insurance['Claim']= lble.fit_transform(insurance['Claim'])
-lblf = preprocessing.LabelEncoder()
-insurance['Destination']= lblf.fit_transform(insurance['Destination'])
+insurance['Agency Type']= lbla.fit_transform(insurance['Agency Type'])
+insurance['Distribution Channel']= lbla.fit_transform(insurance['Distribution Channel'])
+insurance['Product Name']= lbla.fit_transform(insurance['Product Name'])
+insurance['Claim']= lbla.fit_transform(insurance['Claim'])
+insurance['Destination']= lbla.fit_transform(insurance['Destination'])
 
 
 # In[16]:
